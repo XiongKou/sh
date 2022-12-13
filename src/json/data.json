@@ -1,0 +1,150 @@
+{
+    "roleList": [
+        {
+            "value": 1,
+            "text": "托号组"
+        },
+        {
+            "value": 2,
+            "text": "主管/助理"
+        },
+        {
+            "value": 3,
+            "text": "组长"
+        },
+        {
+            "value": 4,
+            "text": "师傅"
+        },
+        {
+            "value": 5,
+            "text": "质检组"
+        },
+        {
+            "value": 6,
+            "text": "拍照部"
+        },
+        {
+            "value": 7,
+            "text": "机动部"
+        }
+    ],
+    "xiongReport":{
+        "need":28,
+        "finish":12,
+        "returnCar":5261
+    }, 
+    "baoma":[
+        {
+         "cheMing":"宝马2系",
+          "gongLi":"100公里" ,
+          "cheJia":"123456",
+          "ruChang":"2020年11月10日",
+          "yuJi":"2020年11月15日",
+          "cheLiang":"拓号组",
+          "leftOne":"待拓号",
+          "leftTwo":"特价车"
+        },
+        {
+            "cheMing":"宝马3系",
+             "gongLi":"200公里" ,
+             "cheJia":"123456",
+             "ruChang":"2020年11月20日",
+             "yuJi":"2020年11月16日",
+             "cheLiang":"拓号组",
+             "leftOne":"待拓号"
+           },
+         {
+            "cheMing":"宝马4系",
+             "gongLi":"300公里" ,
+             "cheJia":"123456",
+             "ruChang":"2020年11月20日",
+             "yuJi":"2020年11月16日",
+             "cheLiang":"拓号组",
+             "leftOne":"待拓号"
+           },
+           {
+            "cheMing":"宝马4系",
+             "gongLi":"300公里" ,
+             "cheJia":"123456",
+             "ruChang":"2020年11月20日",
+             "yuJi":"2020年11月16日",
+             "cheLiang":"拓号组",
+             "leftOne":"待拓号"
+           },
+           {
+            "cheMing":"宝马4系",
+             "gongLi":"300公里" ,
+             "cheJia":"123456",
+             "ruChang":"2020年11月20日",
+             "yuJi":"2020年11月16日",
+             "cheLiang":"拓号组",
+             "leftOne":"待拓号"
+           },{
+            "cheMing":"宝马4系",
+             "gongLi":"300公里" ,
+             "cheJia":"123456",
+             "ruChang":"2020年11月20日",
+             "yuJi":"2020年11月16日",
+             "cheLiang":"拓号组",
+             "leftOne":"待拓号"
+           },
+           {
+            "cheMing":"宝马4系",
+             "gongLi":"300公里" ,
+             "cheJia":"123456",
+             "ruChang":"2020年11月20日",
+             "yuJi":"2020年11月16日",
+             "cheLiang":"拓号组",
+             "leftOne":"待拓号"
+           },
+           {
+            "cheMing":"宝马4系",
+             "gongLi":"300公里" ,
+             "cheJia":"123456",
+             "ruChang":"2020年11月20日",
+             "yuJi":"2020年11月16日",
+             "cheLiang":"拓号组",
+             "leftOne":"待拓号"
+           },
+           {
+            "cheMing":"宝马4系",
+             "gongLi":"300公里" ,
+             "cheJia":"123456",
+             "ruChang":"2020年11月20日",
+             "yuJi":"2020年11月16日",
+             "cheLiang":"拓号组",
+             "leftOne":"待拓号"
+           },
+           {
+            "cheMing":"宝马4系",
+             "gongLi":"300公里" ,
+             "cheJia":"123456",
+             "ruChang":"2020年11月20日",
+             "yuJi":"2020年11月16日",
+             "cheLiang":"拓号组",
+             "leftOne":"待拓号"
+           },
+           {
+            "cheMing":"宝马4系",
+             "gongLi":"300公里" ,
+             "cheJia":"123456",
+             "ruChang":"2020年11月20日",
+             "yuJi":"2020年11月16日",
+             "cheLiang":"拓号组",
+             "leftOne":"待拓号"
+           },
+           {
+            "cheMing":"宝马4系",
+             "gongLi":"300公里" ,
+             "cheJia":"123456",
+             "ruChang":"2020年11月20日",
+             "yuJi":"2020年11月16日",
+             "cheLiang":"拓号组",
+             "leftOne":"待拓号"
+           }
+
+       
+    ]
+
+}
