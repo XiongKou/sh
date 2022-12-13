@@ -2,10 +2,10 @@
   <div class="container">
     <HeaderSearch></HeaderSearch>
     <div class="car-list">
-      <div class="car-item" v-for="item in baoma">
+      <div class="car-item" v-for="(item, index) in baoma" :key="index">
         <!-- v-for循环 -->
         <div class="car-left">
-          <h3>{{ item.cheMing }}</h3>
+          <h3>{{ index + 1 }}、{{ item.cheMing }}</h3>
           <p>公里数：{{ item.gongLi }}</p>
           <p>车架号：{{ item.cheJia }}</p>
           <p>入场计时日期：{{ item.ruChang }}</p>
@@ -13,9 +13,11 @@
           <p>车辆位置：{{ item.cheLiang }}</p>
         </div>
         <div class="car-right">
-          <p class="th-status-0" v-if="isShow">{{ item.leftOne }}</p>
+          <p class="th-status-0" v-if="item.tuut">{{ item.leftOne }}</p>
           <!-- v-if我们要判断里面有没有元素，有就显示，没有就隐藏 -->
-          <p class="quality-status-50" v-if="isShow">{{ item.leftTwo }}</p>
+          <p class="quality-status-50" v-if="item.toon">
+            {{ item.leftTwo }}
+          </p>
         </div>
       </div>
     </div>
@@ -31,7 +33,6 @@ export default {
     return {
       // 第三步这里命名baoma
       baoma: {},
-      isShow: true,
     };
   },
   created() {
@@ -39,6 +40,25 @@ export default {
     // 第二步路径
     axios.get("http://localhost:8081/baoma").then((res) => {
       this.baoma = res.data;
+
+      for (var i = 0; i < this.baoma.length; i++) {
+        console.log(this.baoma[i]);
+        //
+        if (this.baoma[i].leftOne) {
+          this.baoma[i].tuut = true;
+        } else {
+          this.baoma[i].tuut = false;
+        }
+      }
+      for (var i = 0; i < this.baoma.length; i++) {
+        console.log(this.baoma[i]);
+        //
+        if (this.baoma[i].leftTwo) {
+          this.baoma[i].toon = true;
+        } else {
+          this.baoma[i].toon = false;
+        }
+      }
     });
   },
   methods: {
