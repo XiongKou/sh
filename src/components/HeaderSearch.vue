@@ -24,6 +24,7 @@
         name="search"
         class="akd-center-icon akd-center-search"
         v-if="showIcons"
+        @click="souSuo"
       />
     </div>
 
@@ -36,6 +37,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -58,6 +60,9 @@ export default {
     elimi() {
       this.value = "";
       this.showIcons = false;
+    },
+    souSuo() {
+      this.$emit("enlarge-text", this.value);
     },
   },
 };

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <HeaderSearch></HeaderSearch>
+    <HeaderSearch @enlargeText="doSomething"> </HeaderSearch>
     <div class="car-list">
       <div class="car-item" v-for="(item, index) in baoma" :key="index">
         <!-- v-for循环 -->
@@ -68,6 +68,11 @@ export default {
       } else {
         this.isShow = false;
       }
+    },
+    doSomething(value) {
+      axios.get("http://localhost:8081/baoma/" + value).then((res) => {
+        this.baoma = [res.data];
+      });
     },
   },
 
