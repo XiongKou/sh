@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <HeaderSearch @enlargeText="doSomething"> </HeaderSearch>
+    <HeaderSearch @enlargeText="doSomething" @doThis="reFresh"> </HeaderSearch>
+
     <div class="car-list">
       <div class="car-item" v-for="(item, index) in baoma" :key="index">
         <!-- v-for循环 -->
@@ -36,30 +37,7 @@ export default {
     };
   },
   created() {
-    console.log(this.$route.query.type);
-    // 第二步路径
-    axios.get("http://localhost:8081/baoma").then((res) => {
-      this.baoma = res.data;
-
-      for (var i = 0; i < this.baoma.length; i++) {
-        console.log(this.baoma[i]);
-        //
-        if (this.baoma[i].leftOne) {
-          this.baoma[i].tuut = true;
-        } else {
-          this.baoma[i].tuut = false;
-        }
-      }
-      for (var i = 0; i < this.baoma.length; i++) {
-        console.log(this.baoma[i]);
-        //
-        if (this.baoma[i].leftTwo) {
-          this.baoma[i].toon = true;
-        } else {
-          this.baoma[i].toon = false;
-        }
-      }
-    });
+    this.search();
   },
   methods: {
     isShow() {
@@ -70,8 +48,42 @@ export default {
       }
     },
     doSomething(value) {
+      this.search(value);
+    },
+    reFresh() {
+      this.search();
+    },
+    search(value) {
+      // value不传就是underful，underful加个!就是字符串，
+      if (!value) {
+        value = "";
+      }
       axios.get("http://localhost:8081/baoma/" + value).then((res) => {
-        this.baoma = [res.data];
+        // 判断有没有length属性，length属性就是数组
+        if ("length" in res.data) {
+          this.baoma = res.data;
+        } else {
+          this.baoma = [res.data];
+        }
+
+        for (var i = 0; i < this.baoma.length; i++) {
+          console.log(this.baoma[i]);
+          //
+          if (this.baoma[i].leftOne) {
+            this.baoma[i].tuut = true;
+          } else {
+            this.baoma[i].tuut = false;
+          }
+        }
+        for (var i = 0; i < this.baoma.length; i++) {
+          console.log(this.baoma[i]);
+          //
+          if (this.baoma[i].leftTwo) {
+            this.baoma[i].toon = true;
+          } else {
+            this.baoma[i].toon = false;
+          }
+        }
       });
     },
   },
@@ -83,10 +95,12 @@ export default {
 </script>
 
 <style scoped type="css">
+
 .container {
   display: flex;
   flex-direction: column;
   font-size: 15px;
+  height: 100%;
 }
 .car-list {
   margin: 0 5px;

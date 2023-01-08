@@ -60,6 +60,7 @@ export default {
     elimi() {
       this.value = "";
       this.showIcons = false;
+      this.$emit("doThis");
     },
     souSuo() {
       this.$emit("enlarge-text", this.value);

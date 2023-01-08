@@ -5,22 +5,31 @@
 
 <script>
 export default {
-  name: 'App',
-  beforeCreate(){
-    this.$router.push('/index');
-  }
-}
+  name: "App",
+  beforeCreate() {
+    this.$router.push("/index");
+  },
+};
 </script>
 
 <style>
-  body{
-    margin:0;
-    font-family: "微软雅黑";
-  }
-  h1,h2,h3,p,ul{
-    margin:0;
-  }
-  input{
-    padding:0;
-  }
+body,
+html {
+  margin: 0;
+  font-family: "微软雅黑";
+  height: 100%;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+input {
+  padding: 0;
+}
+#app {
+  height: 100%;
+}
 </style>
